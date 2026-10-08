@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de prueba</title>
+    
+    <!-- Aquí puedes pegar todo el código que tenías en tu style.css -->
+    <style>
+      /* --- Variables de Color y Estilos --- */
+:root {
+  --primary: #1e3f20;        /* Verde oscuro tipo bosque profundo */
+  --primary-light: #2d5a27;  
+  --accent: #d4af37;         /* Dorado brillante estilo Trifuerza */
+  --accent-glow: rgba(212, 175, 55, 0.3);
+  --bg-main: #121513;        /* Fondo oscuro moderno */
+  --surface: #1b211d;        /* Color de las tarjetas (fondos oscuros elegantes) */
+  --surface-hover: #232c25;  
+  --text-main: #f0f0f0;      /* Texto claro muy legible */
+  --text-muted: #aaaaaa;     /* Texto secundario */
+  --radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Reset y Estilos Base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* --- Encabezados con Estilo Moderno --- */
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px var(--accent-glow);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--text-main);
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+  border-left: 6px solid var(--accent);
+  padding-left: 1rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 650;
+}
+
+h5 {
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  color: var(--text-muted);
+  word-break: break-word;
+  font-size: 1.05rem;
+}
+
+strong {
+  color: var(--text-main);
+}
+
+/* --- Enlaces Modernos --- */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dashed var(--accent);
+  transition: var(--transition);
+  word-break: break-word;
+}
+
+a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* --- Imagen Destacada --- */
+img {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin: 2rem auto;
+  border: 2px solid var(--accent);
+  transition: var(--transition);
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* --- Listas Estilizadas como Tarjetas Modernas --- */
+ul, ol {
+  background-color: var(--surface);
+  padding: 1.5rem 1.5rem 1.5rem 2.2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  transition: var(--transition);
+}
+
+ul:hover, ol:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+li {
+  margin-bottom: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+li::marker {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+li strong {
+  color: var(--text-main);
+}
+
+/* --- Adaptabilidad Móvil (Responsive Design) --- */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  ul, ol {
+    padding: 1.2rem 1rem 1.2rem 1.5rem;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <h1>The Legend Of Zelda</h1>
+    <p>
+      El destino del reino de <strong>Hyrule</strong> descansa sobre un
+      equilibrio eterno. Detrás de cada juego, existe una leyenda que se repite
+      a lo largo del tiempo: un héroe elegido, una princesa sabia y un heraldo
+      de la oscuridad.
+    </p>
+
+    <h2>Personajes principales</h2>
+    <p>Los tres pilares de la saga son:</p>
+    <ul>
+      <li>Link (<em>El protagonista</em>)</li>
+      <li>Princesa Zelda (<em>Heredera del trono de Hyrule</em>)</li>
+      <li>Ganondorf / Ganon (<em>Villano principal de la franquicia</em>)</li>
+    </ul>
+
+    <h3>Link</h3>
+
+    <img
+      src="https://i.pinimg.com/1200x/16/18/83/161883e2f92806131b69201c76623f02.jpg"
+      alt="Link pequeño"
+      width="500"
+      title="Foto de Link pequeño"
+    />
+
+    <p>
+      El protagonista silencioso y el héroe legendario. Lleva el espíritu del
+      héroe y suele portar la Espada Maestra para proteger el reino de Hyrule
+    </p>
+
+    <h4>Habilidades de Link</h4>
+    <h5>Habilidades clasicas y generales</h5>
+    <ul>
+      <li>
+        <strong>Esgrima y combate:</strong> Es un experto espadachín, hábil con
+        el escudo, el arco, las bombas y diversos proyectiles.
+      </li>
+      <li>
+        <strong>Versatilidad y adaptación:</strong> Aunque no suele tener magia
+        innata como Ganondorf, destaca por aprender rápidamente a usar
+        herramientas, reliquias y armas del entorno.
+      </li>
+      <li>
+        <strong>Trifuerza del Valor:</strong> Es el portador de la Trifuerza del
+        Valor, lo que le brinda protección contra la magia oscura.
+      </li>
+      <li>
+        <strong>Músico:</strong> Toca múltiples instrumentos (como la ocarina,
+        la flauta o el arpa) para resolver acertijos o alterar el mundo.
+      </li>
+    </ul>
+
+    <h5>Habilidades destacadas de TLOZ TOTK</h5>
+    <ul>
+      <li>
+        <strong>Ultramano:</strong> Permite agarrar, mover, rotar y pegar
+        objetos del entorno para construir vehículos o estructuras.
+      </li>
+      <li>
+        <strong>Combinación:</strong> Fusiona armas, escudos o flechas con
+        materiales o elementos (como piedras, hongos o fuego) para crear
+        equipamiento nuevo.
+      </li>
+      <li>
+        <strong>Infiltración:</strong> Permite saltar en vertical y atravesar
+        techos sólidos hacia arriba.
+      </li>
+      <li>
+        <strong>Retroceso:</strong> Hace retroceder en el tiempo el movimiento
+        de un objeto específico.
+      </li>
+    </ul>
+
+    <h4>Algunas de las caracteristicas de Link son:</h4>
+    <ul>
+      <li>
+        <strong>Rol y Destino:</strong> Es el elegido para combatir el mal en el
+        Reino de Hyrule y portador de la <b>Trifuerza del Valor</b>.
+      </li>
+      <li>
+        <strong>Apariencia clásica:</strong> Tradicionalmente es un joven
+        hyliano con orejas puntiagudas, cabello rubio o castaño y ojos azules.
+        Suele vestir una túnica y un gorro de color verde (aunque esto cambió en
+        juegos recientes como Breath of the Wild).
+      </li>
+      <li>
+        <strong>Personalidad:</strong> Es un avatar del jugador; por lo general
+        es callado o introvertido, pero destaca por su enorme valentía, humildad
+        y sentido del deber.
+      </li>
+      <li>
+        <strong>Armas emblemáticas:</strong> Utiliza la legendaria Espada
+        Maestra (Master Sword) y un escudo, además de herramientas clásicas como
+        bombas, bumeranes y ganchos.
+      </li>
+    </ul>
+
+    <h4>
+      La lista de juegos de The Legend Of Zelda con su respectiva consola:
+    </h4>
+
+    <ol>
+      <li><b>The Legend of Zelda</b> (1986) – <i>NES</i></li>
+      <li><b>Zelda II: The Adventure of Link</b> (1987) – <i>NES</i></li>
+      <li>
+        <b>The Legend of Zelda: A Link to the Past</b> (1991) – <i>SNES</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Link's Awakening</b> (1993) – <i>Game Boy</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Ocarina of Time</b> (1998) – <i>Nintendo 64</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Majora's Mask</b> (2000) – <i>Nintendo 64</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Oracle of Ages</b> (2001) –
+        <i>Game Boy Color</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Oracle of Seasons</b> (2001) –
+        <i>Game Boy Color</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: A Link to the Four Swords</b> (2001) –
+        <i>Game Boy Advance</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: The Wind Waker</b> (2002) –
+        <i>Nintendo Game Cube</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Four Swords Adventures</b> (2004) –
+        <i>Nintendo Game Cube</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: The Minish Cap</b> (2004) –
+        <i>Game Boy Advance</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Twilight Princess</b> (2006) –
+        <i>Nintendo Game Cube / Wii</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Phantom Hourglass</b> (2007) –
+        <i>Nintendo DS</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Spirit Tracks</b> (2009) – <i>Nintendo DS</i>
+      </li>
+      <li><b>The Legend of Zelda: Skyward Sword</b> (2011) – <i>Wii</i></li>
+      <li>
+        <b>The Legend of Zelda: A Link Between Worlds</b> (2013) –
+        <i>Nintendo 3DS</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Tri Force Heroes</b> (2015) –
+        <i>Nintendo 3DS</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Breath of the Wild</b> (2017) –
+        <i>Wii U / Nintendo Switch</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Tears of the Kingdom</b> (2023) –
+        <i>Nintendo Switch</i>
+      </li>
+      <li>
+        <b>The Legend of Zelda: Echoes of Wisdom</b> (2024) –
+        <i>Nintendo Switch</i>
+      </li>
+    </ol>
+
+    <h4>
+      Melodias de The Legend Of Zelda (canciones más famosas y reconocidas de la
+      franquicia)
+    </h4>
+    <ul>
+      <li>
+        <a href="https://www.youtube.com/watch?v=cGufy1PAeTU">
+          The Legend of Zelda Main Theme (Tema Principal) </a
+        ><br />
+        Es el himno absoluto de la franquicia, también conocido como el "Tema de
+        Overworld" o el tema del héroe. Debutó en el juego original de 1986 y
+        evoca aventura, valentía y exploración en el Reino de Hyrule. Aparece
+        versionado en casi todas las entregas de la saga.
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=EPhfbtjqWM8">
+          Zelda's Lullaby (La Nana de Zelda) </a
+        ><br />
+        Una dulce melodía cargada de misterio y realeza que sirve como el tema
+        personal de la Princesa Zelda. Introducida principalmente en A Link to
+        the Past, se convirtió en una mecánica fundamental en Ocarina of Time
+        para desbloquear secretos y demostrar la conexión de Link con la familia
+        real.
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=V9so9y-8Dgk">
+          Lost Woods / Saria's Song (Bosque Perdido / Canción de Saria) </a
+        ><br />
+        Uno de los temas más pegadizos e inolvidables de Ocarina of Time. Esta
+        melodía alegre y rítmica suena mientras navegas por el laberíntico
+        Bosque Perdido y es el regalo musical que la amiga de la infancia de
+        Link, Saria, le enseña para comunicarse con ella.
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=AHG03OLr3G0">
+          Gerudo Valley (Valle Gerudo) </a
+        ><br />
+        Un tema que rompe con el estilo orquestal tradicional de la saga al
+        introducir ritmos enérgicos inspirados en el flamenco, guitarras
+        acústicas y trompetas. Suena al adentrarse en la fortaleza del desierto
+        de las guerreras Gerudo en Ocarina of Time y es considerada una obra
+        maestra de la composición en 64 bits.
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=r9udWY3HNsk">
+          Song of Healing (Canción de la Curación) </a
+        ><br />
+        La pieza central de la atmósfera melancólica y oscura de Majora's Mask.
+        Es una melodía de piano suave y nostálgica que Link utiliza para calmar
+        los espíritus atormentados, curar sus pesares y transformarlos en
+        máscaras que le otorgan nuevas habilidades.
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=bLIPuzjjWN0">
+          Great Fairy's Fountain (Fuente de la Gran Hada) </a
+        ><br />
+        Una composición mística de arpa que transmite una paz absoluta. Se
+        escucha comúnmente en las pantallas de selección de archivo o al visitar
+        los santuarios ocultos de las Grandes Hadas para restaurar la salud de
+        Link.
+      </li>
+    </ul>
+  </body>
+</html>
